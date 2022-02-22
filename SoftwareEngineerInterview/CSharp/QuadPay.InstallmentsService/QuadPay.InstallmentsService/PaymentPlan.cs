@@ -12,5 +12,9 @@ namespace QuadPay.InstallmentsService
 		public decimal PurchaseAmount { get; set; }
 
         public Installment[] Installments { get; set; }
+
+        public PaymentPlan() {
+            this.Id = System.Guid.NewGuid();
+        }
     }
 }

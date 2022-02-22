@@ -21,5 +21,13 @@ namespace QuadPay.InstallmentsService
         /// Gets or sets the amount of the installment.
         /// </summary>
         public decimal Amount { get; set; }
+
+        public override string ToString() {
+            return String.Format("{0}   -   ${1:#.00}", DueDate.ToString("MM/dd/yy"), Amount);
+        }
+
+        public Installment() {
+            this.Id = System.Guid.NewGuid();
+        }
 	}
 }
